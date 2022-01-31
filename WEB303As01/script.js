@@ -6,7 +6,7 @@
 
 $(function (){
 
-	$('#percent').change(function(){
+	$('#percent').keyup(function(){
 		
 		let salary = $('#yearly-salary').val();
 		let percent = $('#percent').val();
