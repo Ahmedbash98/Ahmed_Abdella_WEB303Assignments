@@ -38,7 +38,7 @@ $(function () {
 
                 $('#content').append("<h2>Stored location</h2>","latitude: " , obj.latitude+ "<br>"+"longitude: " , obj.longitude);
                 $('#content').append("<br><h3>welcome back</h3>");
-                $("#content").append("<p>You have traveled that distance of "+calcDistanceBetweenPoints(latitude,longitude,)+ " meters since your last visit to this page</p>");
+                $("#content").append("<p>You have traveled that distance of "+calcDistanceBetweenPoints(latitude,longitude,obj.latitude,obj.longitude)+ " meters since your last visit to this page</p>");
 
         }
         else{
