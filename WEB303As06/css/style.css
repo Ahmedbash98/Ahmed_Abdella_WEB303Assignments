@@ -71,6 +71,7 @@ ul.tab-list {
 	padding: 0.75rem;
 	border-radius: 99px;
     color: black;
+    
   }
   ul.tab-list li.active {
     background-color: #ccc;
@@ -91,6 +92,8 @@ ul.tab-list {
     font-size: 24px;
     margin-top: 20px;
     border: 1px solid red;
+    background-color: #eee;
+    color: #444;
  
   }
   .tab-panel.active {
