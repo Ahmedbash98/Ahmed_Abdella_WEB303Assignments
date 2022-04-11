@@ -139,6 +139,70 @@ $(function () {
     }
 
 
+    var compare = {
+        name: function (a, b) {
+            console.log("processing the words", b, ", ", a);
+            if (a < b) {
+                return -1;
+            }
+            else if (b < a) {
+                return 1
+            }
+            else //they're equal
+            {
+                return 0;
+            }
+        },
+        born: function (a, b) {
+            var dateA = new Date(a);
+            var dateB = new Date(b);
+            return dateA - dateB;
+        }
+    };
+
+
+
+    $('.sortable').each(function () {
+        var $table = $(this); // This table
+        var $tbody = $table.find('tbody'); // Table body
+        var $controls = $table.find('th'); // Table headers
+        var rows = $tbody.find('tr').toArray(); // Array of rows
+        $controls.on('click', function () { // Event handler
+            var $header = $(this); // Get header
+            var order = $header.data('sortbythis'); // either name or compareNumbersAscending
+            var column; // Used later
+            if ($header.is('.ascending') || $header.is('.descending')) { // Toggle to other class
+                $header.toggleClass('ascending descending');
+                // Reverse the array
+                $tbody.append(rows.reverse());
+            } else { //not sorted yet, we need to sort
+                $header.addClass('ascending'); // Add class to header
+                // Remove asc or desc from all other headers
+                $header.siblings().removeClass('ascending descending'); // If compare object has method of that name
+                console.log("check if has property");
+                if (compare.hasOwnProperty(order)) {
+                    console.log("has property");
+                    column = $controls.index(this); // Column's index no
+                    rows.sort(function (a, b) { // Call sort() on rows
+                        a = $(a).find('td').eq(column).text();// Text of column row a
+                        b = $(b).find('td').eq(column).text();// Text of column row b
+                        return compare[order](a, b); // Call compare method
+                    });
+                    $tbody.append(rows);
+                }
+            }
+        });
+    });
+
+    
+
+
+
+
+
 
 });
+
+
+
 
