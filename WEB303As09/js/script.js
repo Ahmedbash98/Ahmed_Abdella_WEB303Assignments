@@ -153,7 +153,7 @@ $(function () {
                 return 0;
             }
         },
-        born: function (a, b) {
+        compareDates: function (a, b) {
             var dateA = new Date(a);
             var dateB = new Date(b);
             return dateA - dateB;
