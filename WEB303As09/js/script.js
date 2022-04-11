@@ -138,31 +138,43 @@ $(function () {
         $search.on('keyup', filter);
     }
 
-
-    var compare = {
-        name: function (a, b) {
-            console.log("processing the words", b, ", ", a);
-            if (a < b) {
-                return -1;
-            }
-            else if (b < a) {
-                return 1
-            }
-            else //they're equal
-            {
-                return 0;
-            }
-        },
-        compareDates: function (a, b) {
-            var dateA = new Date(a);
-            var dateB = new Date(b);
-            return dateA - dateB;
+    
+var compare = {
+    name: function (a, b) {
+        console.log("processing the words", b, ", ", a);
+        if (a < b) {
+            return -1;
         }
-    };
-
-
-
-    $('.sortable').each(function () {
+        else if (b < a) {
+            return 1
+        }
+        else //they're equal
+        {
+            return 0;
+        }
+    },
+    compareNumbersAscending: function (a, b) {
+        // b is the first value being compared, a is the second
+        console.log("processing the numbers", b, ", ", a);
+        return parseInt(a) - parseInt(b);
+    },
+    compareNumbersDescending: function (a, b) {
+        // b is the first value being compared, a is the second
+        console.log("processing the numbers", b, ", ", a);
+        return b - a;
+    },
+    compareNumbersRandom: function (a, b) {
+        return 0.5 - Math.random(); // Math.random() returns a value between 0 and 1
+    },
+    date: function (a, b) {
+        var dateA = new Date(a);
+        var dateB = new Date(b);
+        return dateA - dateB;
+    }
+};
+        
+        
+        $('.sortable').each(function () {
         var $table = $(this); // This table
         var $tbody = $table.find('tbody'); // Table body
         var $controls = $table.find('th'); // Table headers
@@ -194,15 +206,5 @@ $(function () {
         });
     });
 
-    
-
-
-
-
-
 
 });
-
-
-
-
