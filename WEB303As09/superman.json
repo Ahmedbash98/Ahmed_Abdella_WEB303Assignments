@@ -4,49 +4,49 @@
             "fname": "Christopher",
             "lname": "Reeve",
             "character": "Superman",
-            "born": 1952,
+            "born": "1952-09-25",
             "birthPlace": "New York"
         },
         {
             "fname": "Gene",
             "lname": "Hackman",
             "character": "Lex Luthor",
-            "born": 1938,
+            "born": "1938-01-30",
             "birthPlace": "San Bernardino"
         },
         {
             "fname": "Ned",
             "lname": "Beatty",
             "character": "Otis",
-            "born": 1937,
+            "born": "1937-07-06",
             "birthPlace": "Louisville"
         },
         {
             "fname": "Margot",
             "lname": "Kidder",
             "character": "Lois Lane",
-            "born": 1948,
+            "born": "1948-10-17",
             "birthPlace": "Yellowknife"
         },
         {
             "fname": "Jack",
             "lname": "O'Halloran",
             "character": "Non",
-            "born": 1943,
+            "born": "1943-04-08",
             "birthPlace": "Philadelphia"
         },
         {
             "fname": "Terence",
             "lname": "Terence Stamp",
             "character": "General Zod",
-            "born": 1938,
+            "born": "1938-07-22",
             "birthPlace": "Stepney"
         },
         {
             "fname": "Marlon",
             "lname": "Brando",
             "character": "Jor-El",
-            "born": 1924,
+            "born": "1924-04-03",
             "birthPlace": "Omaha"
         }
     ]
